@@ -82,8 +82,9 @@ body {
   border-radius: 8px;
 }
 
-.select option:hover {
-  background-color: #fff !important;
+.select option {
+  background: #c4baba40;
+  color: #c4564d;
 }
 
 .list--wrapper {

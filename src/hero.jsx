@@ -1,7 +1,7 @@
 import vid from "./assets/vid.mp4";
 import "./hero.css";
 import plus from "./assets/plus.svg";
-import chevDown from "./assets/down.svg";
+// import chevDown from "./assets/down.svg";
 import trash from "./assets/trash.svg";
 import edit from "./assets/edit.svg";
 import { useState } from "react";
