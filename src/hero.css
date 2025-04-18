@@ -1,0 +1,247 @@
+@import "tailwindcss";
+
+.vid {
+  @apply w-full h-svh object-cover absolute top-0 left-0 -z-10;
+}
+html,
+body {
+  font-family: "Baloo 2", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 500;
+  font-style: normal;
+  color: #fff;
+}
+
+.heading--primary {
+  background-image: linear-gradient(to bottom right, #c4564d 0%, #864b49 60%);
+  font-family: "Baloo 2", sans-serif;
+  font-size: 4.5rem;
+  font-weight: 600;
+  text-align: left;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.Header-wrapper {
+  width: 50%;
+  padding: 1rem 3rem;
+  border-radius: 85px;
+  line-height: 1;
+  backdrop-filter: blur(32px);
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    91.95deg,
+    rgba(255, 255, 255, 0.7) 2.84%,
+    #ffffff7d 94.86%
+  );
+  @apply flex justify-center items-center;
+}
+
+.input {
+  backdrop-filter: blur(32px);
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    91.95deg,
+    rgba(255, 255, 255, 0.7) 2.84%,
+    rgba(255, 255, 255, 0.49) 94.86%
+  );
+  background: #c4baba5e;
+  border-radius: 8px;
+  padding: 0.5rem 1.5rem;
+  width: 34rem;
+}
+
+.input:focus {
+  outline: none;
+  border: none;
+}
+
+.select {
+  backdrop-filter: blur(32px);
+  border: 1px solid;
+  border-image-source: linear-gradient(
+    91.95deg,
+    rgba(255, 255, 255, 0.7) 2.84%,
+    rgba(255, 255, 255, 0.49) 94.86%
+  );
+  background: #c4baba5e;
+  padding: 0.5rem 1.5rem;
+  display: inline-block;
+  border-radius: 10px;
+}
+
+.select:focus {
+  outline: none;
+  border: none;
+}
+.select option {
+  font-size: 1.2rem;
+  font-weight: 500;
+  padding: 0.5rem 1.5rem;
+  border-radius: 8px;
+}
+
+.select option:hover {
+  background-color: #fff !important;
+}
+
+.list--wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 40%;
+  margin-top: 3rem;
+  gap: 2rem;
+}
+
+.list {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  background: #c4baba40;
+  border: 1px solid;
+  border-radius: 85px;
+  padding: 0.5rem 2rem;
+  border-image-source: linear-gradient(
+    91.95deg,
+    rgba(255, 255, 255, 0.7) 2.84%,
+    rgba(255, 255, 255, 0.49) 94.86%
+  );
+  backdrop-filter: blur(32px);
+  p {
+    font-size: 2rem;
+    text-transform: capitalize;
+  }
+}
+
+.done {
+  text-decoration: line-through;
+  color: #e0d0d0;
+  font-size: 2rem;
+  font-weight: 500;
+  font-style: italic;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem;
+  height: 40px;
+  img {
+    height: 36px;
+  }
+  input {
+    width: 36px;
+    border-radius: 50px;
+    background-color: red;
+    height: 100%;
+  }
+}
+
+.custom-checkbox {
+  display: inline-block;
+  position: relative;
+  cursor: pointer;
+  width: 40px;
+  height: 40px;
+}
+
+.custom-checkbox input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 40px;
+  width: 40px;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #fff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s ease;
+}
+
+.checkmark::after {
+  content: "";
+  width: 12px;
+  height: 24px;
+  border: solid #9b9090;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+  display: none;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  display: block;
+}
+
+.clear-all {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #c4baba40;
+  border: 1px solid;
+  border-radius: 85px;
+  padding: 0.5rem 2rem;
+  border-image-source: linear-gradient(
+    91.95deg,
+    rgba(255, 255, 255, 0.7) 2.84%,
+    rgba(255, 255, 255, 0.49) 94.86%
+  );
+  backdrop-filter: blur(32px);
+  margin-top: 2rem;
+  position: absolute;
+  top: 0;
+  right: 50px;
+  background-size: 400%;
+  transition: all 300ms ease-in-out;
+}
+
+.clear-all:hover {
+  background-position: 100%;
+  color: #fff;
+  box-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff,
+    0 0 50px #fff, 0 0 60px #fff, 0 0 70px #fff;
+  text-shadow: 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #fff, 0 0 50px #fff,
+    0 0 60px #fff, 0 0 70px #fff, 0 0 80px #fff;
+  animation: pulse 1.5s infinite;
+  animation-delay: 0.5s;
+  transform: scale(1);
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.05);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+@media (max-width: 768px) {
+  .Header-wrapper {
+    width: 90%;
+    padding: 1rem;
+  }
+  .list--wrapper {
+    width: 90%;
+  }
+  .input {
+    width: 100%;
+  }
+  .select {
+    width: 100%;
+  }
+}
