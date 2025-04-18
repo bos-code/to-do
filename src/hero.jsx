@@ -1,9 +1,8 @@
-import vid from "./assets/vid.mp4";
 import "./hero.css";
-// import plus from "./assets/plus.svg";
-// import chevDown from "./assets/down.svg";
-import trash from "./assets/trash.svg";
-import edit from "./assets/edit.svg";
+const videoSrc = "/vid.mp4";
+const plusIcon = "/plus.svg";
+const trashIcon = "./trash.svg";
+const editIcon = "/edit.svg";
 import { useState } from "react";
 
 function Hero() {
@@ -64,7 +63,7 @@ function Hero() {
         <video
           className="vid"
           preload="auto"
-          src={vid}
+          src={videoSrc}
           autoPlay
           loop
           muted
@@ -123,7 +122,7 @@ function Form({ onitem, onSort }) {
           className="input"
         />
         <button className="btn" type="submit">
-          <img className="w-20 h-20" src={plus} alt="plus" />
+          <img className="w-20 h-20" src={plusIcon} alt="plus" />
         </button>
       </div>
       <Catigories onsort={onSort} />
@@ -210,12 +209,12 @@ function List({
                   className="btn"
                   onClick={() => onEdit(item.id, item.text)}
                 >
-                  <img src={edit} className="w-9" alt="edit" />
+                  <img src={editIcon} className="w-9" alt="edit" />
                 </button>
               )}
 
               <button className="btn" onClick={() => onDel(item.id)}>
-                <img src={trash} alt="delete" />
+                <img src={trashIcon} alt="delete" />
               </button>
             </div>
           </li>
@@ -229,7 +228,7 @@ function ClearAll({ onClearAll }) {
   return (
     <div className="clear-all" onClick={onClearAll}>
       <button className="btn">
-        <img src={trash} alt="delete" />
+        <img src={trashIcon} alt="delete" />
       </button>
       <p className="clear-text">Clear All</p>
     </div>
