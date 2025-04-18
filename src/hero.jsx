@@ -1,8 +1,9 @@
 import "./hero.css";
 const videoSrc = "/vid.mp4";
-const plusIcon = "/plus.svg";
-const trashIcon = "./trash.svg";
+const plusIcon = "/Plus.svg";
+const trashIcon = "/Trash.svg";
 const editIcon = "/edit.svg";
+
 import { useState } from "react";
 
 function Hero() {
